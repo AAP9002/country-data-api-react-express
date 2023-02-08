@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
+import Header from './componants/header' 
+import Footer from './componants/footer' 
+import Homepage from './pages/homepage.js'
+import CountryData from './pages/country_details'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 class App extends Component {
-  state = {country: []}
-
-  componentDidMount() {
-    fetch('/api/getallcountrydata')
-      .then(res => res.json())
-      .then(country => this.setState({ country }));
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <h1>Countries</h1>
-        {this.state.country.map(country_individual =>
-        <>
-          <a  href={country_individual.name.common} key={country_individual.id}>{country_individual.flag}{country_individual.name.common}
-          </a><br/>
-          </>
-        )}
-      </div>
-    );
+  render(){return(
+    <React.Fragment>
+      <Header/>
+      <Router>
+        <Routes>
+          <Route path="/country/:id" element={<CountryData/>}/>
+          <Route exact path="/" element={<Homepage/>}/>
+        </Routes>
+      </Router> 
+      <Footer/>
+    </React.Fragment>
+    )
   }
 }
 

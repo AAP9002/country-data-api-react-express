@@ -1,0 +1,46 @@
+.country{
+    width: 25%;
+    height: fit-content;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .country{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .country{
+        width: 100%;
+    }
+}
+  
+  .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+
+.country_image{
+    width: 100%;
+    aspect-ratio: 6/3;
+    object-fit:fill;
+}
+
+.country_name{
+    color: black;
+    top:-15px;
+    position: relative;
+    background-color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    text-align: center;
+}
