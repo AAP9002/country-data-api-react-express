@@ -50,6 +50,10 @@ function CountryData({match}) {
                             <th scope="row">Car drive side</th>
                             <td>{cont.car.side}</td>
                         </tr>
+                        <tr>
+                            <th scope="row">Currency</th>
+                            <td>{JSON.stringify(cont.currencies)}</td>
+                        </tr>
                     </tbody>
                 </table>
                 <h3>Location</h3>
