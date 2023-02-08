@@ -26,7 +26,7 @@ function CountryData({match}) {
                 <div className={"col-sm-6"}>
                 <h3>Details</h3>
                 <hr/>
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                         <th scope="col">Topic</th>
@@ -58,7 +58,7 @@ function CountryData({match}) {
                 </table>
                 <h3>Location</h3>
                 <hr/>
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                         <th scope="col">Topic</th>
@@ -89,7 +89,7 @@ function CountryData({match}) {
                     </tbody>
                 </table>
                 </div>
-                <iframe style={{aspectRatio:4/3, width:'100%', maxHeight:'100vh'}} id="gmap_canvas" src={"https://maps.google.com/maps?q="+cont.name.common+"&t=&z=5&ie=UTF8&iwloc=&output=embed"} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe style={{aspectRatio:4/3, width:'100%', maxHeight:'100vh'}} title="map" id="gmap_canvas" src={"https://maps.google.com/maps?q="+cont.name.common+"&t=&z=5&ie=UTF8&iwloc=&output=embed"} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               </div>
             </div>
           );

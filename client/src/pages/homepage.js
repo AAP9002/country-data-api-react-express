@@ -13,13 +13,13 @@ class Homepage extends Component {
   render() {
     return (
       <div>
-        <h1 class="title">All</h1>
-        <div class="container">
+        <h1 className="title">All</h1>
+        <div className={"container"}>
           {this.state.country.map((country_individual,index) =>
-            <a href={'#/country/'+index} key={country_individual.id} class="country">
-              <img src={country_individual.flags.svg} class="country_image" alt={country_individual.name.common} loading="lazy"/>
+            <a href={'#/country/'+index} key={country_individual.id} className="country">
+              <img src={country_individual.flags.svg} className="country_image" alt={country_individual.name.common} loading="lazy"/>
               <br/>
-              <p class="country_name">{country_individual.flag}{country_individual.name.common}
+              <p className="country_name">{country_individual.flag}{country_individual.name.common}
               </p>
             </a>
           )}

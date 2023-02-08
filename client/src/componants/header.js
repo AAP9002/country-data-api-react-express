@@ -2,10 +2,6 @@ import '../App.css';
 
 function Header() {
 
-    function random(){
-
-    }
-
     return (
         <div className={'w-100 d-flex flex-row'} style={{justifyContent:"space-around", backgroundColor:"orange"}}>
             <h2>Country Data</h2>
