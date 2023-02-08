@@ -19,21 +19,19 @@ set up proxy
 run in dev
 - start backend
 ```bash
+npm install
 node server.js
 ```
 - start frontend
 ```bash
 cd client
+npm install
 npm start
-```
-
-deploy
-```bash
-cd client
-npm run build
 ```
 
 on hosting
 ```bash
+npm install && cd client && npm install && npm run build && cd ..
+
 node server.js
 ```
