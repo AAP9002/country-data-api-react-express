@@ -6,23 +6,23 @@ import CountryData from './pages/country_details'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {
-  BrowserRouter as Router,
-  Routes,
+  HashRouter,
   Route,
+  Routes,
 } from "react-router-dom";
 
 class App extends Component {
   render(){return(
-    <React.Fragment>
-      <Header/>
-      <Router>
+    <HashRouter>
+      <div>
+        <Header/>
         <Routes>
-          <Route path="/country/:id" element={<CountryData/>}/>
           <Route exact path="/" element={<Homepage/>}/>
+          <Route path="/country/:id" element={<CountryData/>}/>
         </Routes>
-      </Router> 
-      <Footer/>
-    </React.Fragment>
+        <Footer/>
+      </div>
+    </HashRouter>
     )
   }
 }
