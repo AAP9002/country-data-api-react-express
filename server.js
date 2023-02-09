@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require('express');
 const app = express();
 const axios = require('axios');
@@ -6,6 +8,8 @@ const port = process.env.PORT || 5000;
 
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+console.log(process.env.KEY)
 
 app.use(express.static('client/build'))
 // create a GET route
