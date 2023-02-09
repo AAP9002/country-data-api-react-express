@@ -16,7 +16,7 @@ class Homepage extends Component {
         <h1 className="title">All</h1>
         <div className={"container"}>
           {this.state.country.map((country_individual,index) =>
-            <a href={'#/country/'+index} key={country_individual.id} className="country">
+            <a href={'#/country/'+index} key={index} className="country">
               <img src={country_individual.flags.svg} className="country_image" alt={country_individual.name.common} loading="lazy"/>
               <br/>
               <p className="country_name">{country_individual.flag}{country_individual.name.common}
